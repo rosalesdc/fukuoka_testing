@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <data>
+    <record id="partner_bancos_view" model="ir.ui.view">
+      <field name="name">partner.bancos.view</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form" />
+      <field name="arch" type="xml">
+        <xpath expr="//page[@name='internal_notes']" position="after">
+          <page name="Contabilidad" string="Contabilidad">
+            <group string ="Cuentas Bancarias">
+            <field name="banco_ids" nolabel="1">
+            <tree editable="top">
+              <field name="name"></field>
+              <field name="acc_number"></field>
+              <field name="edi_clabe"></field>
+            </tree>
+            </field>
+          </group>
+          </page>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
