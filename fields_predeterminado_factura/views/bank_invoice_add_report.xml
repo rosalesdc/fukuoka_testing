@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="add_partner_bank_report" inherit_id="account.report_payment_receipt">
+        
+        <xpath expr="//div[hasclass('mb64')]" position="after">
+            <t t-if="o.Banco_asociado">
+                <div>
+                    Cuenta de Pago: <span t-field="o.Banco_asociado.acc_number" />
+                </div>
+                <div>
+                    CLABE: <span t-field="o.Banco_asociado.x_clabe" />
+                </div>
+                <div>
+                    Correo electrónico de revisión: 
+                    <span t-esc="o.get_email_partner()" />
+                </div>
+                <br/>
+                <br/>
+            </t>
+        </xpath>
+    </template>
+</odoo>

@@ -24,18 +24,19 @@
         'account'
         ],
 
- #       'purchase',       
- #       'contacts',
- #       'stock',
+#       'purchase',       
+    #       'contacts',
+    #       'stock',
   
 
-    # always loaded
-	'data': [#'views/fabricacion_editableDview.xml',
-              'views/contactos_datos.xml',
-    
-    ],
-	'demo':[
+        # always loaded
+            'data': [#'views/fabricacion_editableDview.xml',
+                'views/contactos_datos.xml',
+                'views/account_payment_bank_view.xml',
+                'views/bank_invoice_add_report.xml',
+        ],
+            'demo':[
 
-	],
-    'installable':True,
+            ],
+        'installable':True,
 }
